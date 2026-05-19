@@ -2,6 +2,11 @@ import { useState, useEffect, useRef } from "react";
 
 import { DICTIONARY } from "./content";
 
+import heroPhoto from "./assets/hero_photo.png";
+import trainerPhoto from "./assets/trainer_photo.png";
+import globalNetworkPhoto from "./assets/global_network_photo.png";
+import counselorsPhoto from "./assets/counselors_photo.png";
+
 function useInView(options = {}) {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -704,7 +709,7 @@ export default function App() {
                     style={{
                       position: "absolute",
                       inset: 0,
-                      backgroundImage: "url('/src/assets/hero_photo.png')",
+                      backgroundImage: `url(${heroPhoto})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }}
@@ -852,9 +857,9 @@ export default function App() {
                       <img
                         src={
                           [
-                            "/src/assets/trainer_photo.png",
-                            "/src/assets/global_network_photo.png",
-                            "/src/assets/counselors_photo.png",
+                            trainerPhoto,
+                            globalNetworkPhoto,
+                            counselorsPhoto,
                           ][i]
                         }
                         alt={f.name}
